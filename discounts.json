@@ -1,0 +1,17 @@
+{
+    "swag": {
+        "items": ["VOUCHER", "TSHIRT", "MUG"],
+        "ppunit": "false",
+        "price": 25
+    },
+    "2for1": {
+        "items": ["VOUCHER", "VOUCHER"],
+        "ppunit": "false",
+        "price": 5
+    },
+    "bulky": {
+        "items": ["TSHIRT", "TSHIRT", "TSHIRT"],
+        "ppunit": "true",
+        "price": 19
+    }
+}
