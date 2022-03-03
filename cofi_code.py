@@ -64,7 +64,6 @@ class CheckoutClass:
                 counter += 1
                 if all(i-j>-1 for i,j in zip(scItemsList, discList)):
                     break
-            print("discount: ", k, counter, total, scItemsList)
         return scItemsList, total
 
     def _listFromDict(self, dct):
