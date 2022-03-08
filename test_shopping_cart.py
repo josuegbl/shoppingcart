@@ -61,6 +61,12 @@ class TestCheckout(unittest.TestCase):
                                               "_applyDiscounts: remaining items"
                                               "list is not [0,0,0]")
 
+    def testTotal(self):
+        co = self.importChekout()
+        co.scan("VOUCHER")
+        co.scan("MUG")
+        self.assertTrue(co.total()=="total amount: 12.50 € ", "Failed value")
+
 if __name__ == '__main__':
     unittest.main()
 
