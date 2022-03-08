@@ -16,7 +16,7 @@ class CheckoutClass:
         scItemsList, total = self._applyDiscounts()
         for k,v in zip(dictPrices.items(), scItemsList):
             total += k[1]*v
-        print("total amount: %0.2f € " %total)
+        return "total amount: %0.2f €" % total
 
     def resetScan(self):
         """Function to reset the scanned items."""

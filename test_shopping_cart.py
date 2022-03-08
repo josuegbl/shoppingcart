@@ -65,7 +65,10 @@ class TestCheckout(unittest.TestCase):
         co = self.importChekout()
         co.scan("VOUCHER")
         co.scan("MUG")
-        self.assertTrue(co.total()=="total amount: 12.50 € ", "Failed value")
+        trueValue = "total amount: 12.50 €"
+        self.assertTrue(co.total() == trueValue, "Funtion total failed. The "
+                                                 "total amount not correspond"
+                                                 "to expected value.")
 
 if __name__ == '__main__':
     unittest.main()
