@@ -49,9 +49,7 @@ class CheckoutClass:
             for i in v["items"]:
                 discItemsDict[i]+= 1
             discList = self._listFromDict(discItemsDict)
-            counter = 0
             while all(i-j>-1 for i,j in zip(scItemsList, discList)):
-                
                 if v["ppunit"] == "false":
                     scItemsList = [i-j for i,j in zip(scItemsList, discList)]
                     total += v["price"]
@@ -61,9 +59,6 @@ class CheckoutClass:
                         if j > 0:
                             total += v["price"]*i
                             scItemsList[l] = 0
-                counter += 1
-                if all(i-j>-1 for i,j in zip(scItemsList, discList)):
-                    break
         return scItemsList, total
 
     def _listFromDict(self, dct):
